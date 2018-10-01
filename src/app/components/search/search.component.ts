@@ -15,6 +15,8 @@ export class SearchComponent  {
   }
 
   search(artist: string) {
+
+    // TODO: Error cuando elimino lo que se habia buscado.
     this.loading = true;
     this._service.getArtist( artist )
         .subscribe( (data: any) => {
