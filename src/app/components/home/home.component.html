@@ -1,5 +1,6 @@
-<div class="card-columns">
-    <app-card [Release]="release" *ngFor="let release of newReleases"></app-card>
+<app-loading *ngIf="loading"></app-loading>
+<div class="card-columns m-5">
+    <app-card [item]="release" *ngFor="let release of newReleases"></app-card>
 </div>
 
 <!-- <div>
