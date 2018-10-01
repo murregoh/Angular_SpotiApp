@@ -17,6 +17,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { ArtistComponent } from './components/artist/artist.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     NavbarComponent,
     CardComponent,
     NoimagePipe,
-    LoadingComponent
+    LoadingComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
