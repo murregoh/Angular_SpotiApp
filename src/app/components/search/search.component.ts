@@ -10,6 +10,8 @@ export class SearchComponent  {
 
   artista: Array<any>;
   loading: boolean;
+  error: boolean;
+  errorMessage: string;
 
   constructor( private _service: SpotifyService) {
   }
@@ -22,6 +24,11 @@ export class SearchComponent  {
         .subscribe( (data: any) => {
           this.artista = data;
           this.loading = false;
+    }, ( errorService ) => {
+      this.loading = false;
+      this.error = true;
+      this.errorMessage = errorService['error']['error']['message'];
+      console.log( errorService );
     });
   }
 
