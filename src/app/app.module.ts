@@ -11,22 +11,29 @@ import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
-import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ArtistComponent } from './components/artist/artist.component';
 
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { ErrorComponent } from './components/shared/error/error.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
-    ArtistComponent,
     NavbarComponent,
     CardComponent,
-    NoimagePipe
+    NoimagePipe,
+    LoadingComponent,
+    ArtistComponent,
+    DomseguroPipe,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

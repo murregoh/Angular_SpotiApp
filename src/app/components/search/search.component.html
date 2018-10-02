@@ -3,8 +3,10 @@
         <input #artist type="text" (keyup)="search(artist.value)" class="form-control" placeholder="Search Artist">
     </div>
 </div>
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+<app-error class="m-5" [errorStatus]="error" [errorMessage]="errorMessage"></app-error>
 <div class="row m-5">
     <div class="card-columns">
-        <app-artist [artista]="item" *ngFor="let item of artista"></app-artist>
+        <app-card [item]="item" *ngFor="let item of artista"></app-card>
     </div>
 </div>
